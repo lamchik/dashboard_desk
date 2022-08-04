@@ -1,0 +1,75 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.6875rem;
+    background: #FFE445;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.bigButton {
+    width: 19.5rem;
+}
+
+.normalButton {
+    width: 15.625rem;
+}
+
+.smallButton {
+    width: 9.5rem;
+}
+
+.addGreyButton {
+    height: 1.875rem;
+    width: 5.4375rem;
+    background: none;
+    border: 1px solid #929292;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.addingCommentButton {
+    width: 12rem;
+    height: 1.5rem;
+    justify-content: start;
+    background: none;
+    border: none;
+}
+
+.yesOrNoButton{
+    width: 5.875rem;
+    height: 2.5rem;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.buttonText {
+    font-family: 'YS Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: #333333;
+    margin: 0;
+}
+
+.addingCommentButtonText {
+    font-size: 14px;
+    line-height: 15px;
+    color: #929292;
+}
+
+
+.img{
+    margin-right: 7.33px;
+}
+

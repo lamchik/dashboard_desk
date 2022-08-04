@@ -1,0 +1,46 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 5rem 1rem;
+    gap: 17px;
+}
+
+.tag {
+    height: 100%;
+    border-radius: 2px;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+.colorViolent {
+    background-color: rgba(238, 225, 253, 1);
+}
+
+.colorGreen {
+    background-color: rgba(186, 248, 207, 1)
+}
+
+.colorRed {
+    background-color: rgba(254, 214, 204, 1)
+}
+
+.colorOrange {
+    background-color: rgba(255, 220, 182, 1);
+}
+
+.colorBlue {
+    background-color: rgba(184, 230, 255, 1)
+}
+
+.colorLightGreen {
+    background-color: rgba(216, 252, 176, 1)
+}
+
+.colorDarkBlue {
+    background-color: rgba(198, 217, 255, 1)
+}
+
+.colorYellow {
+    background-color: rgba(255, 244, 199, 1)
+}
+
+
