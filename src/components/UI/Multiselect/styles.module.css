@@ -32,12 +32,16 @@
 }
 
 details {
+    position: absolute;
+    top: 325px;
+    left: 98px;
     background: #D8D7D7;
     border-radius: 3px;
-    width: 10.5rem;
     z-index: 1;
-    margin-bottom: 14px;
+    width: 10.5rem;
 }
+
+
 
 .buttonSelect {
     display: flex;
@@ -48,7 +52,7 @@ details {
     width: 10.5rem;
     height: 2.25rem;
     background: #E3E3E3;
-    border-radius: 3px 3px 0px 0px;
+    border-radius: 3px;
     border: none;
     cursor: pointer;
     transition: 0.2s linear;
@@ -56,6 +60,12 @@ details {
 
 .buttonSelect:hover {
     opacity: 0.8;
+}
+
+
+details[open] summary {
+    border-bottom: none;
+    border-radius: 3px 3px 0px 0px;
 }
 
 

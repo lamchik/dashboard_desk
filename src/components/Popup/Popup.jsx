@@ -17,9 +17,11 @@ export const Popup = ({text}) => {
           </button>
           <h1 className={styles.header}>{text}</h1>
           <div className={styles.content}>
-            <Input placeholder='Название'/>
-            <Input isInputMultiline={true} placeholder='Описание'/>
-            <Multiselect/>
+            <div>
+              <Input placeholder='Название'/>
+              <Input isInputMultiline={true} placeholder='Описание'/>
+              <Multiselect/>
+            </div>
             <Button buttonText='Сохранить'/>
           </div>
         </div>

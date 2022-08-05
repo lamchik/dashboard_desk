@@ -1,7 +1,7 @@
 .wrapper {
-    //display: grid;
-    //grid-template-columns: 5rem 100%;
-    //gap: 17px;
+    display: grid;
+    grid-template-columns: 5rem 30%;
+    gap: 17px;
 }
 
 .tag {
