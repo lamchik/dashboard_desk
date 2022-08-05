@@ -13,7 +13,7 @@ export const TaskCard = ({title}) => {
       <p className={styles.text}>{title}</p>
       <ButtonActionMenu/>
       <div className={styles.tagsWrapper}>
-        <TagsList isVertical={true} withCheckbox={false} tags={tags} isTagSmall={true} isVerticalSmallTag={true}/>
+        <TagsList isVertical={true} withCheckbox={false} tags={tags} isHorizontalSmallTag={true}/>
       </div>
       <div className={styles.messages}>
         <img src={warning} alt='warning' className={styles.img}/>

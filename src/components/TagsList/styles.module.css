@@ -17,8 +17,8 @@
 .wrapperHorizontalSmallTag {
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fill, 40px);
-    grid-template-rows: 18px;
+    grid-template-columns: repeat(4, 40px);
+    grid-template-rows: repeat(2, 18px);
     gap: 6px;
 }
 

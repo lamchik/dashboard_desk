@@ -22,8 +22,8 @@ export const App = () => {
 
   return (
     <div className={styles.container}>
-      {/*<MainPage/>*/}
-      <TicketPage/>
+      <MainPage/>
+      {/*<TicketPage/>*/}
       {/*<TagsList withCheckbox={false} tags={tags}/>*/}
       {/*<TaskCard title='Нарисовать иллюстрации'/>*/}
       {/*<Button buttonText='Добавить тикет' withPlusIcon={true} isNormalButton={true}/>*/}
