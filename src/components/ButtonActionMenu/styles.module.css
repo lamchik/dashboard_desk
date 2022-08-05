@@ -1,0 +1,21 @@
+.button {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.absolute {
+    position: absolute;
+    top: 17px;
+    right: 12px;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.image{
+    margin-right: 2px;
+}

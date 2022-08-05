@@ -16,13 +16,16 @@ export const Button = (
     isAddGreyButton = false,
     isYesOrNoButton = false,
     isAddingCommentButton = false,
+    isPositionCenter = true
   }
 ) => {
 
   const src = isAddingCommentButton ? plus : adding
 
   return (
-    <>
+    <div className={classnames({
+      [styles.positionCenter] : isPositionCenter
+    }, styles.wrapper)}>
       <button className={classnames(styles.button, {
         [styles.smallButton] : isSmallButton,
         [styles.bigButton] : isBigButton,
@@ -36,6 +39,6 @@ export const Button = (
           [styles.addingCommentButtonText] : isAddingCommentButton,
         })}>{buttonText}</p>
       </button>
-    </>
+    </div>
     )
 }

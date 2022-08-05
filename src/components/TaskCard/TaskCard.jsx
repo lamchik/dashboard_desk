@@ -1,22 +1,19 @@
 import {tags} from "../../contstans/tags";
-
-import buttonImg from '../../assets/images/action_menu.svg'
 import warning from '../../assets/images/warning.svg'
 import message from '../../assets/images/message.svg'
 import {TagsList} from "../TagsList/TagsList";
 
 import styles from './styles.module.css'
+import {ButtonActionMenu} from "../ButtonActionMenu/ButtonActionMenu";
 
 export const TaskCard = ({title}) => {
 
   return (
     <div className={styles.container}>
       <p className={styles.text}>{title}</p>
-      <button className={styles.button}>
-        <img src={buttonImg} alt='button' className={styles.image}/>
-      </button>
+      <ButtonActionMenu/>
       <div className={styles.tagsWrapper}>
-        <TagsList isVertical={true} withCheckbox={false} tags={tags}/>
+        <TagsList isVertical={true} withCheckbox={false} tags={tags} isTagSmall={true} isVerticalSmallTag={true}/>
       </div>
       <div className={styles.messages}>
         <img src={warning} alt='warning' className={styles.img}/>

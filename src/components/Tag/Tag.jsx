@@ -4,7 +4,10 @@ import {Checkbox} from "../Checkbox/Checkbox";
 
 import styles from './styles.module.css'
 
-export const Tag = ({classNameColor, classNameWidth, withCheckbox}) => {
+export const Tag = ({
+    classNameColor,
+    withCheckbox
+}) => {
 
   function getColor(classNameColor) {
     switch (classNameColor) {
@@ -30,11 +33,11 @@ export const Tag = ({classNameColor, classNameWidth, withCheckbox}) => {
 
   const tag = withCheckbox ?
     <div className={styles.wrapper}>
-      <div className={classnames(getColor(classNameColor), classNameWidth, styles.tag)}></div>
+      <div className={classnames(getColor(classNameColor), styles.tag)}></div>
       <Checkbox checkboxId={classNameColor}/>
     </div>
     :
-    <div className={classnames(getColor(classNameColor), classNameWidth, styles.tag)}></div>
+    <div className={classnames(getColor(classNameColor), styles.tag)}></div>
 
   return (
     <>

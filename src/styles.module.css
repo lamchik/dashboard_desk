@@ -1,5 +1,8 @@
 .container {
-    padding: 4rem 6rem;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 2.3125rem 10rem;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);

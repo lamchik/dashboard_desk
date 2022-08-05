@@ -10,6 +10,8 @@ import {Comment} from "./components/Comment/Comment";
 
 import './assets/fonts/YandexSans.css'
 import styles from './styles.module.css'
+import {MainPage} from "./pages/MainPage/MainPage";
+import {TicketPage} from "./pages/TicketPage/TicketPage";
 
 export const App = () => {
   const name = 'Иванов Иван'
@@ -20,23 +22,25 @@ export const App = () => {
 
   return (
     <div className={styles.container}>
-      <TagsList withCheckbox={false} tags={tags}/>
-      <TaskCard title='Нарисовать иллюстрации'/>
-      <Button buttonText='Добавить тикет' withPlusIcon={true} isNormalButton={true}/>
-      <Button buttonText='Сохранить'/>
-      <Button buttonText='Сохранить' isSmallButton={true}/>
-      <Button buttonText='Да' isYesOrNoButton={true}/>
-      <Button buttonText='Добавить' isAddGreyButton={true}/>
-      <Button buttonText='Добавить комментарий' isAddingCommentButton={true} withPlusIcon={true}/>
-      <Checkbox isWithText={true} text='Комментарий' checkboxId='comment' />
-      <Checkbox isWithText={true} text='Описание' checkboxId='description'/>
-      <Checkbox isWithText={true} text='Тег' checkboxId='tag'/>
-      <div>
-        <Input placeholder='Название'/>
-        <Input isInputMultiline={true} placeholder='Описание'/>
-      </div>
-      <Multiselect/>
-      <Comment text={text} name={name}/>
+      {/*<MainPage/>*/}
+      <TicketPage/>
+      {/*<TagsList withCheckbox={false} tags={tags}/>*/}
+      {/*<TaskCard title='Нарисовать иллюстрации'/>*/}
+      {/*<Button buttonText='Добавить тикет' withPlusIcon={true} isNormalButton={true}/>*/}
+      {/*<Button buttonText='Сохранить'/>*/}
+      {/*<Button buttonText='Сохранить' isSmallButton={true}/>*/}
+      {/*<Button buttonText='Да' isYesOrNoButton={true}/>*/}
+      {/*<Button buttonText='Добавить' isAddGreyButton={true}/>*/}
+      {/*<Button buttonText='Добавить комментарий' isAddingCommentButton={true} withPlusIcon={true}/>*/}
+      {/*<Checkbox isWithText={true} text='Комментарий' checkboxId='comment' />*/}
+      {/*<Checkbox isWithText={true} text='Описание' checkboxId='description'/>*/}
+      {/*<Checkbox isWithText={true} text='Тег' checkboxId='tag'/>*/}
+      {/*<div>*/}
+      {/*  <Input placeholder='Название'/>*/}
+      {/*  <Input isInputMultiline={true} placeholder='Описание'/>*/}
+      {/*</div>*/}
+      {/*<Multiselect/>*/}
+      {/*<Comment text={text} name={name}/>*/}
     </div>
   )
 }

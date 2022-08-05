@@ -8,3 +8,14 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'YS Text';
+  src: local('YandexSansText-Bold'), local('YandexSansText-Bold'),
+    url('../fonts/YandexSansText-Regular.woff2') format('woff2'),
+    url('../fonts/YandexSansText-Regular.woff') format('woff'),
+    url('../fonts/YandexSansText-Regular.ttf') format('ttf');
+  font-weight: 500;
+  font-style: bold;
+  font-display: swap;
+}
