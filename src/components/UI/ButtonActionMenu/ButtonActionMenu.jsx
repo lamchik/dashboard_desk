@@ -1,6 +1,6 @@
 import classnames from "classnames";
 import styles from './styles.module.css'
-import buttonImg from "../../assets/images/action_menu.svg";
+import buttonImg from "../../../assets/images/action_menu.svg";
 
 export const ButtonActionMenu = ({isAbsolute=true}) => {
 

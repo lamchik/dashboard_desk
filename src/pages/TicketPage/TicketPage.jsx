@@ -1,9 +1,9 @@
 import arrowBack from '../../assets/images/arrow_back.svg'
-import {ButtonActionMenu} from "../../components/ButtonActionMenu/ButtonActionMenu";
-import {Input} from "../../components/Input/Input";
+import {ButtonActionMenu} from "../../components/UI/ButtonActionMenu/ButtonActionMenu";
+import {Input} from "../../components/UI/Input/Input";
 import {TagsList} from "../../components/TagsList/TagsList";
 import {Comment} from "../../components/Comment/Comment";
-import {Button} from "../../components/Button/Button";
+import {Button} from "../../components/UI/Button/Button";
 import {tags} from "../../contstans/tags";
 
 import styles from './styles.module.css'

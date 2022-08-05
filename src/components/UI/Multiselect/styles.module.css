@@ -23,7 +23,7 @@
 }
 
 .textSelect {
-    font-family: 'YS Text';
+    font-family: 'YS Text', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -34,6 +34,9 @@
 details {
     background: #D8D7D7;
     border-radius: 3px;
+    width: 10.5rem;
+    z-index: 1;
+    margin-bottom: 14px;
 }
 
 .buttonSelect {
@@ -51,7 +54,7 @@ details {
     transition: 0.2s linear;
 }
 
-buttonSelect:hover {
+.buttonSelect:hover {
     opacity: 0.8;
 }
 

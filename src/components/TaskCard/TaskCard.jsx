@@ -4,7 +4,7 @@ import message from '../../assets/images/message.svg'
 import {TagsList} from "../TagsList/TagsList";
 
 import styles from './styles.module.css'
-import {ButtonActionMenu} from "../ButtonActionMenu/ButtonActionMenu";
+import {ButtonActionMenu} from "../UI/ButtonActionMenu/ButtonActionMenu";
 
 export const TaskCard = ({title}) => {
 

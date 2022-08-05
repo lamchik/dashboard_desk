@@ -30,7 +30,7 @@
 }
 
 .customCheckbox:checked+label::before {
-  background-image: url('../../assets/images/checked.svg');
+  background-image: url('../../../assets/images/checked.svg');
 }
 
 .text{

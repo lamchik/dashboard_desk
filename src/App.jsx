@@ -1,17 +1,18 @@
 import {tags} from "./contstans/tags";
 
 import {TagsList} from "./components/TagsList/TagsList";
-import {Checkbox} from "./components/Checkbox/Checkbox";
+import {Checkbox} from "./components/UI/Checkbox/Checkbox";
 import {TaskCard} from "./components/TaskCard/TaskCard";
-import {Button} from "./components/Button/Button";
-import {Input} from "./components/Input/Input";
-import {Multiselect} from "./components/Multiselect/Multiselect";
+import {Button} from "./components/UI/Button/Button";
+import {Input} from "./components/UI/Input/Input";
+import {Multiselect} from "./components/UI/Multiselect/Multiselect";
 import {Comment} from "./components/Comment/Comment";
 
 import './assets/fonts/YandexSans.css'
 import styles from './styles.module.css'
 import {MainPage} from "./pages/MainPage/MainPage";
 import {TicketPage} from "./pages/TicketPage/TicketPage";
+import {Popup} from "./components/Popup/Popup";
 
 export const App = () => {
   const name = 'Иванов Иван'
@@ -23,6 +24,8 @@ export const App = () => {
   return (
     <div className={styles.container}>
       <MainPage/>
+      <Popup text='Создать тикет'/>
+
       {/*<TicketPage/>*/}
       {/*<TagsList withCheckbox={false} tags={tags}/>*/}
       {/*<TaskCard title='Нарисовать иллюстрации'/>*/}

@@ -1,6 +1,6 @@
 import classnames from "classnames";
 
-import {Checkbox} from "../Checkbox/Checkbox";
+import {Checkbox} from "../UI/Checkbox/Checkbox";
 
 import styles from './styles.module.css'
 

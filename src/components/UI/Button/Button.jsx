@@ -1,7 +1,7 @@
 import classnames from "classnames";
 
-import adding from '../../assets/images/plus_black.svg'
-import plus from '../../assets/images/plus_gray.svg'
+import adding from '../../../assets/images/plus_black.svg'
+import plus from '../../../assets/images/plus_gray.svg'
 
 import styles from './styles.module.css'
 

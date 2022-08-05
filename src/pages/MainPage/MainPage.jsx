@@ -1,8 +1,8 @@
 import {Column} from "../../components/Column/Column";
-import {Checkbox} from "../../components/Checkbox/Checkbox";
-import {Button} from "../../components/Button/Button";
+import {Checkbox} from "../../components/UI/Checkbox/Checkbox";
 
 import styles from './styles.module.css'
+import {Popup} from "../../components/Popup/Popup";
 
 export const MainPage = () => {
 

@@ -1,5 +1,5 @@
 import {TaskCard} from "../TaskCard/TaskCard";
-import {Button} from "../Button/Button";
+import {Button} from "../UI/Button/Button";
 
 import styles from './styles.module.css'
 
