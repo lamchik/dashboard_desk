@@ -1,7 +1,7 @@
-import {tags} from "../../contstans/tags";
+import {tags} from "../../../contstans/tags";
 
-import arrow from "../../assets/images/arrow_down.svg";
-import {TagsList} from "../TagsList/TagsList";
+import arrow from "../../../assets/images/arrow_down.svg";
+import {TagsList} from "../../TagsList/TagsList";
 
 import styles from './styles.module.css'
 

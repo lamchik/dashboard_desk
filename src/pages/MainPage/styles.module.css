@@ -1,0 +1,17 @@
+.wrapper {
+     display: grid;
+     grid-template-rows: repeat(2, min-content);
+     gap: 4.9rem;
+}
+
+.columnWrapper {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 12px;
+}
+
+.checkboxWrapper {
+     display: grid;
+     grid-template-columns: repeat(3, min-content);
+     gap: 28px;
+}

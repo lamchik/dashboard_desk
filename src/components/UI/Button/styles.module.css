@@ -1,4 +1,16 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.positionCenter {
+    display: flex;
+    justify-content: center;
+}
+
 .button {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,6 +50,7 @@
     justify-content: start;
     background: none;
     border: none;
+    margin-bottom: 16px;
 }
 
 .yesOrNoButton{

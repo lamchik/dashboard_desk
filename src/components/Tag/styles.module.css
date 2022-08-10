@@ -1,13 +1,12 @@
 .wrapper {
     display: grid;
-    grid-template-columns: 5rem 1rem;
+    grid-template-columns: 5rem 30%;
     gap: 17px;
 }
 
 .tag {
     height: 100%;
     border-radius: 2px;
-    margin-bottom: 0.75rem;
     cursor: pointer;
 }
 
