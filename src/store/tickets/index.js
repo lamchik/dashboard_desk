@@ -1,6 +1,5 @@
-import { createAction, createReducer, createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { getAllTickets } from '../../api'
-
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
+import {getAllTickets, createTicket,  updateTicket, getTicketById, deleteTicket, addComment} from '../../api'
 
 const initialState = {
   groups: {
@@ -12,33 +11,50 @@ const initialState = {
   ticketsById: {}
 }
 
-const getAllTicketsThunk = createAsyncThunk(
+export const getAllTicketsThunk = createAsyncThunk(
   'tickets/getAll',
   async (filters) => {
     return await getAllTickets(filters)
   }
 )
 
-const updateTicketsPositions = createAction('updateTickets')
-const createTicket = createAction('createTicket')
-const getAllTicketsAction = createAction('getAllTickets')
-const getTicketById = createAction('getTicketById')
-const updateTicket = createAction('updateTicket')
-const deleteTicket = createAction('deleteTicket')
-const addCommentToTicket = createAction('addCommentToTicket')
+export const createTicketThunk = createAsyncThunk(
+  'tickets/create',
+  async (ticket) => {
+    return await createTicket(ticket)
+  }
+)
 
-export const ticketsReducer = createReducer(initialState, (builder) => {
-  builder
-    .addCase(getAllTicketsThunk.fulfilled,  (state, action) => {
-      state.allTickets = action.payload
-    })
-    // .addCase(updateTicketsPositions, (state, action) => {
-    //   state.groups.group1.push("10")
-    // })
-    // .addCase(createTicket, (state, action) => {
-    //   state.byId[action.id] = action
-    // })
-})
+export const updateTicketThunk = createAsyncThunk(
+  'ticket/update',
+  async ({id, ticket},) => {
+    return await updateTicket(id, ticket)
+  }
+)
+
+export const getTicketByIdThunk = createAsyncThunk(
+  'ticket/getById',
+  async (id,) => {
+    return getTicketById(id);
+  }
+)
+
+export const deleteTicketThunk = createAsyncThunk(
+  'ticket/delete',
+  async (id) => {
+    return deleteTicket(id);
+  }
+)
+
+export const addCommentThunk = createAsyncThunk(
+  'ticket/addComment',
+  async ({ticketId, comment}) => {
+    return addComment(ticketId, comment);
+  }
+)
+
+export const getAllTicketsSelector = state => state.reducer.allTickets
+export const getTicketByIdSelector = (id) => state => state.reducer.ticketsById[id]
 
 export const ticketsSlice = createSlice({
   name: 'tickets',
@@ -48,8 +64,23 @@ export const ticketsSlice = createSlice({
   },
   extraReducers: (builder) => {
     // Add reducers for additional action types here, and handle loading state as needed
-    builder.addCase(getAllTicketsThunk.fulfilled,  (state, action) => {
-      state.allTickets = action.payload
-    })
+    builder
+      .addCase(getAllTicketsThunk.fulfilled, (state, action) => {
+        state.allTickets = action.payload
+      })
+      .addCase(createTicketThunk.fulfilled, (state, action) => {
+        state.ticketsById[action.payload.id] = action.payload
+        state.allTickets.push(action.payload)
+      })
+      .addCase(updateTicketThunk.fulfilled, (state, action) => {
+        state.ticketsById[action.payload.id] = action.payload
+        state.allTickets = state.allTickets.filter(ticket => ticket.id !== action.payload.id).concat([action.payload])
+      })
+      .addCase(getTicketByIdThunk.fulfilled, (state, action) => {
+        state.ticketsById[action.payload.id] = action.payload
+      })
+      .addCase(addCommentThunk.fulfilled, (state, action) => {
+        state.ticketsById[action.payload.id] = action.payload
+      })
   },
 })

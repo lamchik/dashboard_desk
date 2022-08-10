@@ -1,13 +1,20 @@
 import classnames from "classnames";
 
 import {Checkbox} from "../UI/Checkbox/Checkbox";
+import {useId} from "react";
 
 import styles from './styles.module.css'
 
-export const Tag = ({
+export const Tag = (
+  {
     classNameColor,
-    withCheckbox
+    withCheckbox,
+    value,
+    onChange,
+    tagsInTasksColumn=false,
+    tagsInMultiselect = false
 }) => {
+  const id = useId();
 
   function getColor(classNameColor) {
     switch (classNameColor) {
@@ -27,22 +34,27 @@ export const Tag = ({
         return styles.colorDarkBlue
       case 'colorYellow':
         return styles.colorYellow
-      default: return ''
+      default:
+        return ''
     }
   }
 
-  const tag = withCheckbox ?
-    <div className={styles.wrapper}>
-      <div className={classnames(getColor(classNameColor), styles.tag)}></div>
-      <Checkbox checkboxId={classNameColor}/>
-    </div>
-    :
-    <div className={classnames(getColor(classNameColor), styles.tag)}></div>
-
   return (
-    <>
-      {tag}
-    </>
+    withCheckbox ?
+      <div className={styles.wrapper}>
+        <label htmlFor={id} className={classnames(getColor(classNameColor), styles.tag)}></label>
+        <Checkbox value={value} onChange={onChange}/>
+      </div>
+      :
+      <div className={
+        classnames(getColor(classNameColor),
+          styles.tag,
+          {
+            [styles.smallTag] : tagsInTasksColumn,
+            [styles.tagsInMultiselect] : tagsInMultiselect
+          }
+
+        )}></div>
   )
 }
 

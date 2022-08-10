@@ -1,5 +1,4 @@
 .wrapper {
-    display: flex;
     flex-direction: column;
 }
 
@@ -9,16 +8,12 @@
     align-items: center;
     box-sizing: border-box;
     width: 17.3125rem;
-    min-height: 7.9rem;
     border: 1px solid #CACACA;
     border-radius: 7px;
     padding: 14px 14px 12px;
 }
 
-.title {
-    font-family: 'YS Text', serif;
-    font-size: 16px;
-    line-height: 19px;
-    color: #333333;
-    margin-left: 25px;
+.columnWrapper:first-child {
+    display: none;
 }
+

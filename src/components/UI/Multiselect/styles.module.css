@@ -1,11 +1,33 @@
 .tagsListWrapper {
+    position: absolute;
+    width: 10.5rem;
     height: 9.125rem;
     padding: 10px;
     box-sizing: border-box;
+    background: #D8D7D7;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.wrap {
+    display: flex;
+}
+
+.currentTagsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    height: 20px;
+    border-radius: 2px;
+    width: 40px;
+    cursor: pointer;
+    background-color: #FFE445;
 }
 
 .tagsList{
-    height: 4.5625rem;
+    //height: 4.5625rem;
     height: 7.875rem;
     overflow-y: scroll;
 }
@@ -31,14 +53,14 @@
     color: #333333;
 }
 
-details {
-    position: absolute;
-    top: 325px;
-    left: 98px;
-    background: #D8D7D7;
+.wrapper {
     border-radius: 3px;
     z-index: 1;
     width: 10.5rem;
+    margin-bottom: 0.875rem;
+    background: #E3E3E3;
+    border: none;
+
 }
 
 
