@@ -1,0 +1,59 @@
+.popup {
+    position: absolute;
+    top: -30px;
+    right: 14px;
+    width: 133px;
+    height: 62px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 13px 0 12px 13px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+}
+
+.popupInvisible{
+    display: none;
+}
+
+.text {
+    font-family: 'YS Text', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    color: #333333;
+    margin: 0;
+}
+
+.closeButton {
+    position: absolute;
+    top: 9.5px;
+    right: 9.5px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.button {
+    width: 53px;
+    display: flex;
+    align-items: start;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.closeButton:hover{
+    opacity: 0.5;
+}
+
+.button:hover{
+    opacity: 0.5;
+}

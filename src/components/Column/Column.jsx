@@ -1,21 +1,41 @@
+import { rectSortingStrategy, SortableContext } from "@dnd-kit/sortable";
+import { useDroppable } from "@dnd-kit/core";
 import {TaskCard} from "../TaskCard/TaskCard";
 import {Button} from "../UI/Button/Button";
 
 import styles from './styles.module.css'
 
-export const Column = ({text, isDoneColumn = false}) => {
+export const Column = ({index, onClick, onTaskClick, id, tickets}) => {
+  const { setNodeRef } = useDroppable({ id });
+
+  const droppableStyle = {
+    touchAction: "none",
+  };
 
   return (
-    <div className={styles.wrapper}>
-      <h1 className={styles.title}>{text}</h1>
-      <div className={styles.column}>
-        <TaskCard title='Нарисовать иллюстрации'/>
-        <TaskCard title='Нарисовать иллюстрации'/>
-        <TaskCard title='Нарисовать иллюстрации'/>
-        <TaskCard title='Нарисовать иллюстрации'/>
-        <TaskCard title='Нарисовать иллюстрации'/>
-        {!isDoneColumn && <Button buttonText='Добавить тикет' withPlusIcon={true} isNormalButton={true}/>}
+    <SortableContext
+      className={styles.wrapper}
+      id={id}
+      items={tickets}
+      strategy={rectSortingStrategy}
+    >
+      <div className={styles.column} style={droppableStyle} ref={setNodeRef}>
+        {tickets.map((ticket) => (
+          <TaskCard
+            key={ticket.id}
+            id={ticket.id}
+            title={ticket.name}
+            tagIDs={ticket.tags}
+            description={ticket.description}
+            comments={ticket.comments}
+            onTaskClick={onTaskClick}
+          />
+        ))}
+        {
+          index!==2 &&
+          <Button buttonText='Добавить тикет' withPlusIcon={true} isNormalButton={true} onClick={() => onClick(id)}/>
+        }
       </div>
-    </div>
+    </SortableContext>
   )
 }

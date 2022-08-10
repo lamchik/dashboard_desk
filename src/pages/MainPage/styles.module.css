@@ -5,13 +5,26 @@
 }
 
 .columnWrapper {
+     display: flex;
+     flex-direction: column;
+}
+
+.column {
      display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     gap: 12px;
+     grid-template-columns: repeat(3, min-content);
+     gap: 14px;
 }
 
 .checkboxWrapper {
      display: grid;
      grid-template-columns: repeat(3, min-content);
      gap: 28px;
+}
+
+.title {
+     font-family: 'YS Text', serif;
+     font-size: 16px;
+     line-height: 19px;
+     color: #333333;
+     margin: 0 0 0 25px;
 }

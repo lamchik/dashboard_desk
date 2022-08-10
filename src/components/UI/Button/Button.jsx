@@ -16,7 +16,8 @@ export const Button = (
     isAddGreyButton = false,
     isYesOrNoButton = false,
     isAddingCommentButton = false,
-    isPositionCenter = true
+    isPositionCenter = true,
+    isSubmit = false,
   }
 ) => {
 
@@ -26,7 +27,7 @@ export const Button = (
     <div className={classnames({
       [styles.positionCenter] : isPositionCenter
     }, styles.wrapper)}>
-      <button className={classnames(styles.button, {
+      <button type={isSubmit ? 'submit' : undefined} onClick={onClick} className={classnames(styles.button, {
         [styles.smallButton] : isSmallButton,
         [styles.bigButton] : isBigButton,
         [styles.normalButton] : isNormalButton,

@@ -4,12 +4,17 @@
     border: none;
     cursor: pointer;
     transition: 0.2s linear;
+    padding: 5px 10px;
 }
 
 .absolute {
     position: absolute;
     top: 17px;
     right: 12px;
+}
+
+.inVisible{
+    display: none;
 }
 
 .button:hover {
