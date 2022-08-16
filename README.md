@@ -1,4 +1,5 @@
 # Приложение - Таск-менеджер доска
+https://stunning-jelly-07f934.netlify.app/?tags=false&comments=false&description=false
 
 Приложение таск-менеджер состоящее из двух страниц
 
