@@ -6,7 +6,7 @@ import {Button} from "../UI/Button/Button";
 import styles from './styles.module.css'
 
 export const Column = ({index, onClick, onTaskClick, id, tickets}) => {
-  const { setNodeRef } = useDroppable({ id });
+  const { isOver, setNodeRef } = useDroppable({ id });
 
   const droppableStyle = {
     touchAction: "none",
@@ -32,7 +32,6 @@ export const Column = ({index, onClick, onTaskClick, id, tickets}) => {
           />
         ))}
         {
-          index!==2 &&
           <Button buttonText='Добавить тикет' withPlusIcon={true} isNormalButton={true} onClick={() => onClick(id)}/>
         }
       </div>

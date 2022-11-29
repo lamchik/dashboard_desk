@@ -12,7 +12,8 @@
 .column {
      display: grid;
      grid-template-columns: repeat(3, min-content);
-     gap: 14px;
+     column-gap: 3rem;
+     row-gap: 1rem;
 }
 
 .checkboxWrapper {
